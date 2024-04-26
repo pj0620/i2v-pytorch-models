@@ -11,6 +11,9 @@ RUN echo using OPENBLAS_CORETYPE=$OPENBLAS_CORETYPE
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
 
+RUN echo testing torch import
+RUN python3 -c 'import torch'
+
 ARG MODEL_NAME
 COPY download_model.py .
 RUN python3 ./download_model.py
