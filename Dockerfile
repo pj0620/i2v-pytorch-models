@@ -6,6 +6,7 @@ RUN apt-get update
 RUN pip install --upgrade pip setuptools
 
 ENV OPENBLAS_CORETYPE ARMV8
+RUN apt-get install -y python-numpy python3-numpy
 
 COPY requirements.txt .
 RUN pip3 install -r requirements.txt
