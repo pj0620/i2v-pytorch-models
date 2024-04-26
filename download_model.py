@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+print("OPENBLAS_CORETYPE = ", os.getenv("OPENBLAS_CORETYPE"))
+
 import sys
 import os
 import torchvision.models as models
